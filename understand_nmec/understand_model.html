@@ -14259,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Understand-model">Understand model<a class="anchor-link" href="#Understand-model">&#182;</a></h1><p>Updated 2021-04-08, 2021-05-17</p>
+<h1 id="Understand-model">Understand model<a class="anchor-link" href="#Understand-model">&#182;</a></h1><p>Updated 2021-04-08, 2021-05-17, 2015-05-19</p>
 
 </div>
 </div>
@@ -14292,7 +14292,8 @@ $$
 \begin{align}
 X_1(T_{db}) &amp;= {\rm min}(tempKnot_1,T_{db}) \\
 {\rm leftover}_1 &amp;= T_{db} - X_1 \\
-X_2(T_{db}) &amp;= {\rm max}(tempKnot_3, {\rm min}(tempKnot_2,{\rm leftover}_1)) \\
+X_2(T_{db}) &amp;= {\rm max}(tempKnot_2-tempKnot_1, {\rm min}(0,{\rm leftover}_1)) \\
+{\rm leftover}_2 &amp;= T_{db} - (X_1 + X_2) \\
 \dots \\
 X_{K+1} &amp;= {\rm leftover}_{K}
 \end{align}
@@ -14371,8 +14372,8 @@ Coefficients:
 <li>Consider the <a href="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf">R Core Team's Reference Index</a></li>
 <li>Hadley Wickham, one of the RStudio developers, has some really good online book content, covering e.g. <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data structures such as data.frame</a>.</li>
 </ul>
-<p>Note that the R community has been around a while, and historically did not have a convention of posting full documentation for user packages to be browsed online (rather, users would browse it after installing the package).
-However, there is at least one site that scrapes the web and shows the help files for public R packages, e.g.</p>
+<p>Note that the R community has been around a while, and the historical convention for documentation is for a package to be listed in CRAN with a single PDF file of the package documentation. When you install the package, you will have the option to read the documentation locally in your web browser.
+However, there is at least one site that scrapes the web and shows the help files for public R packages in HTML format, e.g.</p>
 <ul>
 <li><a href="https://rdrr.io/github/LBNL-ETA/RMV2.0/man/">https://rdrr.io/github/LBNL-ETA/RMV2.0/man/</a></li>
 </ul>
