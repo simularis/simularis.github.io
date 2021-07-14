@@ -62,7 +62,6 @@ tr.border-above th, tr.border-above td {
 tr.border-below th, tr.border-below td {
   border-bottom: black 1px solid;
 }
-
 @media print, screen and (max-width: 1024px) {
   div.myblog {
     width: auto;
@@ -74,13 +73,18 @@ tr.border-below th, tr.border-below td {
     width: auto;
   }
   header {
-    padding-right: 320px
+    padding-right: 320px;
   }
   article.content {
     border: 1px solid #e5e5e5;
     border-width: 1px 0;
     padding: 20px 0;
-    margin: 0 0 20px
+    margin: 0 0 20px;
+  }
+}
+@media print, screen and (max-width: 800px) {
+  header {
+    padding: 0;
   }
 }
 </style>
